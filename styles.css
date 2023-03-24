@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+body {
+  display: flex;
+  background: linear-gradient(to top left, rgb(41, 17, 73), rgb(17, 39, 73));
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.cat-form {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0;
+  padding: 15px;
+  width: 275px;
+  height: fit-content;
+  z-index: 1;
+}
+.cat-form h1 {
+  color: rgba(0, 0, 0, 0.65);
+  font-family: "Urbanist";
+  font-size: 25px;
+  margin: 0;
+}
+.cat-form .header {
+  font-family: "Urbanist";
+  font-size: 14px;
+  color: rgb(138, 138, 138);
+  margin: 15px 0 5px 0;
+  display: block;
+}
+.cat-form .media-selection {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+}
+.cat-form .media-selection span {
+  display: flex;
+}
+.cat-form .media-selection span div {
+  background: linear-gradient(to top left, rgb(63, 31, 105), rgb(31, 38, 105));
+  border-radius: 5px;
+  position: absolute;
+  height: 30px;
+  width: 137.5px;
+  transition-duration: 0.2s;
+}
+.cat-form .media-selection span p {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Urbanist";
+  font-size: 13px;
+  padding: 7px;
+  margin: 0;
+  width: 50%;
+  user-select: none;
+  z-index: 10;
+}
+.cat-form #cat-text {
+  font-family: "Urbanist";
+  font-size: 15px;
+  color: rgb(78, 43, 122);
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+  padding: 5px;
+  width: 95%;
+}
+.cat-form #cat-text::placeholder {
+  color: rgb(168, 168, 168);
+}
+
+#cat-button {
+  font-family: "Urbanist";
+  float: right;
+  padding: 5px 20px;
+  margin: 50px 0 0 0;
+  transition-duration: 0.15s;
+}
+#cat-button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+@keyframes form-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  font-family: "Urbanist";
+  color: white;
+  display: flex;
+  gap: 5px;
+  z-index: 0;
+}
+.footer p {
+  margin: 0;
+}
+.footer a {
+  text-decoration: underline;
+  margin: 0;
+}
+.footer a:visited {
+  color: white;
+}
+
+@keyframes image-in {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.cat-image {
+  border-radius: 5px;
+  animation: image-in 1s;
+  height: 50vw;
+  width: 50vw;
+  z-index: 1;
+}
+
+@keyframes overlay-in {
+  0% {
+    opacity: 100%;
+    z-index: 2;
+  }
+  100% {
+    opacity: 50%;
+    z-index: 0;
+  }
+}
+.cat-image-overlay {
+  position: absolute;
+  animation: overlay-in 2s forwards;
+  scale: 1.5;
+  height: 50vw;
+  width: 50vw;
+  z-index: 1;
+}
+
+.cat-image-visible {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.cat-image-visible #cool-button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Urbanist";
+  font-weight: bold;
+  font-size: 20px;
+  width: fit-content;
+  padding: 5px 15px;
+  margin-top: 20px;
+  transition-duration: 0.2s;
+  z-index: 3;
+}
+.cat-image-visible #cool-button:hover {
+  scale: 1.25;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
